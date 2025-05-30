@@ -44,13 +44,6 @@ This project demonstrates how to host a static website using Amazon S3. The webs
 ![Static Website Hosting on S3](Documentation/Images/image3.png)
 
 
-### Step 4: Access the Website
-* Use the bucket's public URL to access the website. It typically looks like:
-```
-http://your-bucket-name.s3-website-region.amazonaws.com
-```
-
-![Access the Website](Documentation/Images/intro-image.png) 
 
 ## Using ACLs
 ### Access Control Lists (ACLs)
@@ -62,7 +55,16 @@ ACLs are a set of rules that determine who can access your S3 resources. In this
     * After uploading your files, select them in the S3 console.
     * From the "Actions" dropdown, choose "Make public using ACL".
     * This action grants public read access to the website files, resolving any 403 errors when accessing the bucket endpoint.
+      
+![Access Control Lists](Documentation/Images/s3-architecture.png)
 
+### Step 4: Access the Website
+* Use the bucket's public URL to access the website. It typically looks like:
+```
+http://your-bucket-name.s3-website-region.amazonaws.com
+```
+
+![Access the Website](Documentation/Images/intro-image.png) 
 
 ### Troubleshooting
 * **403 Forbidden Error:** If you encounter this error, ensure that the objects in your bucket are made public using ACLs.
